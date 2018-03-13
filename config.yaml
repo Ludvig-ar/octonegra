@@ -86,7 +86,12 @@ plugins:
     messages:
       StatusPrinting:
         combined: true
+<<<<<<< HEAD
 Hidden TokenprinterProfiles:
+=======
+    token: 
+printerProfiles:
+>>>>>>> 1e7b59cc9c4c71da13e349a40c7cc2cd9199d218
   default: _default
 serial:
   autoconnect: true
