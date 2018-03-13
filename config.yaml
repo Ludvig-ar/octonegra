@@ -87,7 +87,7 @@ plugins:
     messages:
       StatusPrinting:
         combined: true
-    token: 558910464:AAFhV1Uv3-gfR0QY863eRIJ284TGFXBmQHw
+    token: 
 printerProfiles:
   default: _default
 serial:
