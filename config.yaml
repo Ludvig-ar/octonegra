@@ -1,7 +1,8 @@
 accessControl:
   salt: ytaU1m2u2ASCNeMFKzQET8Pygbnjs5Ys
 api:
-Hidden Keycontrols:
+Hidden Key
+controls:
 - children:
   - command: M117 Hola
     name: Command
@@ -86,12 +87,8 @@ plugins:
     messages:
       StatusPrinting:
         combined: true
-<<<<<<< HEAD
-Hidden TokenprinterProfiles:
-=======
-    token: 
+Hidden Token
 printerProfiles:
->>>>>>> 1e7b59cc9c4c71da13e349a40c7cc2cd9199d218
   default: _default
 serial:
   autoconnect: true

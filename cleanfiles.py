@@ -22,7 +22,7 @@ for line in fin:
 	tenchars = line.strip()
         initial = tenchars[0:3]
 	if ("key"==initial):
-		linechanged="Hidden Key"+"\r"
+		linechanged="Hidden Key"+"\n"
 	else:
 		linechanged=line
 	fout.write(linechanged)
@@ -35,7 +35,7 @@ for line in fin:
 	tenchars = line.strip()
         initial = tenchars[0:5]
 	if ("token"==initial):
-		linechanged="Hidden Token"+"\r"
+		linechanged="Hidden Token"+"\n"
 	else:
 		linechanged=line
 	fout.write(linechanged)
