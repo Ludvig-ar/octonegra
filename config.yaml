@@ -1,0 +1,137 @@
+accessControl:
+  salt: ytaU1m2u2ASCNeMFKzQET8Pygbnjs5Ys
+api:
+  key: 9EB9831023974D2FBAF9849FC6C392D6
+controls:
+- children:
+  - command: M117 Hola
+    name: Command
+    width: '2'
+  - command: M117 Hola
+    name: Command1
+    width: '2'
+  layout: horizontal_grid
+  name: Mis Comandos
+plugins:
+  announcements:
+    _config_version: 1
+    channels:
+      _blog:
+        read_until: 1513605600
+      _important:
+        read_until: 1509547500
+      _octopi:
+        read_until: 1499253000
+      _plugins:
+        read_until: 1519603200
+      _releases:
+        read_until: 1513079100
+  cura:
+    cura_engine: /usr/local/bin/cura_engine
+  discovery:
+    publicPort: 80
+    upnpUuid: c905ce21-1ee8-4215-bb67-9700407f5aec
+  softwareupdate:
+    _config_version: 6
+    check_providers:
+      customcontrol: customControl
+      detailedprogress: detailedprogress
+      telegram: telegram
+    checks:
+      octoprint:
+        update_folder: /home/pi/OctoPrint
+  telegram:
+    _config_version: 3
+    chats:
+      '481420886':
+        accept_commands: true
+        allow_users: false
+        commands:
+          /abort: true
+          /con: true
+          /ctrl: true
+          /dontshutup: true
+          /files: true
+          /help: false
+          /print: true
+          /settings: true
+          /shutup: true
+          /status: true
+          /sys: true
+          /test: false
+          /togglepause: true
+          /tune: true
+          /upload: true
+          /user: true
+          'No': false
+          'Yes': false
+        id: '481420886'
+        image: /plugin/telegram/img/user/pic481420886.jpg?1520946726558
+        new: false
+        newUsr: false
+        notifications:
+          PrintDone: true
+          PrintFailed: true
+          PrintPaused: true
+          PrintResumed: true
+          PrintStarted: true
+          PrinterShutdown: true
+          PrinterStart: true
+          StatusNotPrinting: false
+          StatusPrinting: false
+          ZChange: false
+        private: true
+        send_notifications: true
+        title: 'Ludvig - Aratrom - '
+    message_at_print_done_delay: '1'
+    messages:
+      StatusPrinting:
+        combined: true
+    token: 558910464:AAFhV1Uv3-gfR0QY863eRIJ284TGFXBmQHw
+printerProfiles:
+  default: _default
+serial:
+  autoconnect: true
+  baudrate: 250000
+  port: /dev/ttyACM0
+server:
+  commands:
+    serverRestartCommand: sudo service octoprint restart
+    systemRestartCommand: sudo shutdown -r now
+    systemShutdownCommand: sudo shutdown -h now
+  firstRun: false
+  onlineCheck:
+    enabled: true
+  pluginBlacklist:
+    enabled: true
+  secretKey: ZTM0kOy5aZdeTfCY48l63uyyPCJgVBPy
+  seenWizards:
+    corewizard: 3
+    cura: null
+    telegram: 1
+system:
+  actions:
+  - action: printer on
+    command: gpio export 17 out&gpio -g write 17 1
+    name: Encender la impresora
+  - action: printer off
+    command: gpio export 17 out&gpio -g write 17 0
+    name: Apagar la impresora
+  - action: light on
+    command: gpio export 23 out&gpio -g write 23 1
+    name: Encender la luz
+  - action: light off
+    command: gpio export 23 out&gpio -g write 23 0
+    name: Apagar la luz
+temperature:
+  profiles:
+  - bed: 100
+    extruder: 210
+    name: ABS
+  - bed: '50'
+    extruder: '210'
+    name: PLA
+webcam:
+  ffmpeg: /usr/bin/avconv
+  snapshot: http://127.0.0.1:8080/?action=snapshot
+  stream: /webcam/?action=stream
